@@ -17,7 +17,7 @@ while (number > 999)
   number = number / 10;
 }
 
-if (number < 1000) ;
+if (number < 1000)
 {
   Console.WriteLine($"{number = number % 10}");
 }
