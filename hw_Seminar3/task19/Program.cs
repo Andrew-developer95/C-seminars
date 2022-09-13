@@ -19,7 +19,7 @@ if (number < 10000)
   Console.WriteLine("Введите пятизначное число!");
 }
 
-if (number > 10000 && digit1 == digit5 && digit2 % 10 == digit4 % 10) 
+if (number > 10000 && digit1 == digit5 && digit2 % 10 == digit4 % 10)
 {
   Console.WriteLine("Число является палиндромом, поздравляю! :D");
 }
@@ -115,3 +115,29 @@ if (digit1 != digit5)
 //   Console.WriteLine("Число является палиндромом, поздравляю! :D");
 
 // }
+
+Console.WriteLine("Введите пятизначное число: ");
+int num = Convert.ToInt32(Console.ReadLine());
+
+if (num >= 10000 && num <= 99999)
+{
+  int temp_num = num;
+  int rev_num = 0;
+  while (temp_num > 0)
+  {
+    rev_num = rev_num * 10 + temp_num % 10;
+    temp_num = temp_num / 10;
+  }
+  if (num == rev_num)
+  {
+    Console.WriteLine($"Число {num} является палиндром");
+  }
+  else
+  {
+    Console.WriteLine($"Число {num} не является палиндром");
+  }
+}
+else
+{
+  Console.WriteLine($"Число {num} не является пятизначным");
+}
